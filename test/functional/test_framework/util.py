@@ -548,3 +548,8 @@ def mine_large_block(node, utxos=None):
     fee = 100 * node.getnetworkinfo()["relayfee"]
     create_lots_of_big_transactions(node, txouts, utxos, num, fee=fee)
     node.generate(1)
+
+def generate_load(node, blocks, transactions):
+    """
+    Create change output(s), return them
+    """
